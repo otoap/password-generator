@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "JetBrains Mono", monospace;
+}
+
+body{
+    background-color: #08070b;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin: 0 1.6rem;
+    width: 34.3rem
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24232c;
+    width: 100%;
+    margin-top: 1.6rem;
+    padding: 1.7rem 1.5rem;
+}
+
+.top-input p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e6e5ea;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #817d92;
+}
+
+button {
+    border: none;
+    background-color: #24232c;
+    cursor: pointer;
+    display: flex;
+}
+
+.top .top-btn-p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #a4ffaf;
+    margin-right: 1.6rem;
+}
+
+#password {
+    background-color: #24232c;
+    color: #e6e5ea;
+    border: none;
+    outline: none;
+    display: inline-block;
+}
+
+/*middle*/
+.middle {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    background-color: #24232c;
+    margin-top: 1.6rem;
+}
+
+.middle-top label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e6e5ea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.3rem;
+}
+
+label span {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #a4ffaf;
+}
+
+.middle-top input {
+    appearance: none;
+    background: linear-gradient(to right, #a4ffaf 50%, #18171f 50%);
+    height: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.middle-top input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #e6e5ea;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+}
+
+.middle-top input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #e6e5ea;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+}
+
+.middle-top input[type="range"]::-ms-thumb {
+    appearance: none;
+    background-color: #e6e5ea;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+}
+
+/*checkboxes*/
+.includes-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 4.2rem;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-box label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e6e5ea;
+}
+
+.includes-box input {
+    appearance: none;
+    border: solid 2px #e6e5ea;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    /* background-color: #a4ffaf;
+    background-image: url("./images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; */
+}
+
+/*bottom*/
+.bottom {
+    background-color: #24232c;
+    padding: 1.6rem;
+}
+
+.strength {
+    background-color: #18171f;
+    padding: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #817d92;
+}
+
+.indicator-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.6rem;
+}
+
+.indicator-box p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e6e5ea;
+}
+
+.cube-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.cube {
+    border: solid 2px #e6e5ea;
+    width: 1rem;
+    height: 2.8rem;
+}
+
+
+.bottom button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #24232c;
+    padding: 1.8rem;
+    background-color: #a4ffaf;
+    width: 100%;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+
+@media (min-width:768px) {
+    main {
+        width: 54rem;
+    }
+
+    h1{
+        font-size: 2.4rem;
+    }
+
+    #password {
+        font-size: 3.2rem;
+    }
+
+    .top-input {
+        padding: 1.9rem 3.2rem;
+    }
+
+    .middle {
+        padding: 3.2rem 3.2rem 1.6rem;
+    }
+
+    .middle-top label {
+        font-size: 1.8rem;
+    }
+
+    label span {
+        font-size: 3.2rem;
+    }
+
+    .input-box label {
+        font-size: 1.8rem;
+    }
+
+    .bottom {
+        padding: 1.6rem 3.2rem 3.2rem;
+    }
+
+    .bottom button {
+        margin-top: 3.2rem;
+        font-size: 1.8rem;
+    }
+
+    .top .top-btn-p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #a4ffaf;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .indicator-box p {
+        font-size: 2.4rem;
+    }
+}
