@@ -155,10 +155,10 @@ label span {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
-    /* background-color: #a4ffaf;
-    background-image: url("./images/icon-check.svg");
     background-repeat: no-repeat;
     background-position: center;
+    /* background-color: #a4ffaf;
+    
     border: none; */
 }
 
