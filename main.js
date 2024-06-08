@@ -4,13 +4,36 @@ let lowCase = "abcdefghijklmnopqrstuvwxyz";
 let numList = "0123456789";
 let symbol = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-let checkBox = document.getElementsByClassName("checkbox")
-let checkBoxArr = Array.from(checkBox)
+//range input
+let quantity = document.getElementsByTagName("span")[0]
+let range = document.getElementById("length");
 
+//checkbox
+let checkBox = document.getElementsByClassName("checkbox")
+let checkBoxArr = Array.from(checkBox);
+
+//level strength checker
 let level = document.getElementsByClassName("level")[0];
 let cube = document.getElementsByClassName("cube");
 cube = Array.from(cube);
 
+
+//button
+let btn = document.getElementsByTagName("button")[1];
+
+
+btn.addEventListener("click", ()=> {
+    
+})
+
+//input
+range.addEventListener("input", ()=> {
+    quantity.innerHTML = range.value;
+    range.style.background = `linear-gradient(to right, #a4ffaf ${range.value*5}%, #18171f ${range.value*5}%)`;
+})
+
+
+//checkbox
 let count = 0;
 
 checkBoxArr.forEach((element, index) => {
