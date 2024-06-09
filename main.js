@@ -1,42 +1,21 @@
 "use strict"
-let upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let lowCase = "abcdefghijklmnopqrstuvwxyz";
-let numList = "0123456789";
-let symbol = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 //range input
 let quantity = document.getElementsByTagName("span")[0]
 let range = document.getElementById("length");
 
-//checkbox
-let checkBox = document.getElementsByClassName("checkbox")
-let checkBoxArr = Array.from(checkBox);
-
-//level strength checker
-let level = document.getElementsByClassName("level")[0];
-let cube = document.getElementsByClassName("cube");
-cube = Array.from(cube);
-
-
-//button
-let btn = document.getElementsByTagName("button")[1];
-
-
-btn.addEventListener("click", ()=> {
-    
-})
-
-//input
 range.addEventListener("input", ()=> {
     quantity.innerHTML = range.value;
     range.style.background = `linear-gradient(to right, #a4ffaf ${range.value*5}%, #18171f ${range.value*5}%)`;
 })
 
-
 //checkbox
+let checkBox = document.getElementsByClassName("checkbox")
+let checkBoxArr = Array.from(checkBox);
+
 let count = 0;
 
-checkBoxArr.forEach((element, index) => {
+checkBoxArr.forEach((element) => {
     element.addEventListener("click", ()=> {
         if(element.style.backgroundImage && element.style.backgroundImage!="unset"){
             element.style.border = "solid 2px #e6e5ea"
@@ -113,3 +92,65 @@ checkBoxArr.forEach((element, index) => {
         }
     })
 })
+
+//level strength checker
+let level = document.getElementsByClassName("level")[0];
+let cube = document.getElementsByClassName("cube");
+cube = Array.from(cube);
+
+//button COPY
+let copy = document.getElementsByTagName("button")[0];
+let password = document.getElementById("password");
+let copied = document.getElementsByClassName("top-btn-p")[0]
+
+copy.addEventListener("click", ()=> {
+    password = password.textContent;  //სამჯერ copy დაკლიკების შემთხვევაში მაქვს ერორი
+    navigator.clipboard.writeText(password)
+    if(copied.textContent.length == 0) {
+        copied.innerHTML = "COPIED"
+    }else{
+        return
+    }
+    
+})
+
+
+//button GENERATE
+let upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let lowCase = "abcdefghijklmnopqrstuvwxyz";
+let numList = "0123456789";
+let symbol = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+let symbolsArr = [upCase, lowCase, numList, symbol];
+
+let newArr = []
+
+let pas = ""
+
+let btn = document.getElementsByTagName("button")[1];
+
+
+btn.addEventListener("click", ()=> {
+    checkBoxArr.forEach( (element, index)=> {
+        if(element.style.backgroundImage != "unset" && element.style.backgroundImage) {
+            newArr.push(...symbolsArr[index]);
+        }
+    })
+    if(newArr!=0) {
+        for(let i=0; i<range.value; i++) {
+            
+            pas+=newArr[Math.floor(Math.random()*newArr.length)]
+        }
+    }else {
+        alert("mark which symbols do you want for your password :)")
+    }
+    console.log(pas)
+    if(pas.length!= 0){
+        password.innerHTML = pas;
+        pas = "";
+    }else {
+        return
+    }
+})
+
+//input როგორ უნდა იყოს პასვორდის გარემო და მომხმარებელს არ მივცე ჩაწერის უფლება
