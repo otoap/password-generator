@@ -145,7 +145,6 @@ btn.addEventListener("click", ()=> {
     }else {
         alert("mark which symbols do you want for your password :)")
     }
-    console.log(pas)
     if(pas.length!= 0){
         password.innerHTML = pas;
         pas = "";
@@ -153,5 +152,3 @@ btn.addEventListener("click", ()=> {
         return
     }
 })
-
-//input როგორ უნდა იყოს პასვორდის გარემო და მომხმარებელს არ მივცე ჩაწერის უფლება
