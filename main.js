@@ -101,11 +101,12 @@ cube = Array.from(cube);
 //button COPY
 let copy = document.getElementsByTagName("button")[0];
 let password = document.getElementById("password");
-let copied = document.getElementsByClassName("top-btn-p")[0]
+let copied = document.getElementsByClassName("top-btn-p")[0];
+let holder;
 
 copy.addEventListener("click", ()=> {
-    password = password.textContent;  //სამჯერ copy დაკლიკების შემთხვევაში მაქვს ერორი
-    navigator.clipboard.writeText(password)
+    holder = password.textContent;
+    navigator.clipboard.writeText(holder)
     if(copied.textContent.length == 0) {
         copied.innerHTML = "COPIED"
     }else{
